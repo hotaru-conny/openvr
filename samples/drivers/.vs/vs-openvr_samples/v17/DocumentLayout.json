@@ -3,6 +3,18 @@
   "WorkspaceRootPath": "C:\\Users\\haruto\\Documents\\GitHub\\openvr\\openvr\\samples\\drivers\\",
   "Documents": [
     {
+      "AbsoluteMoniker": "D:0:0:{13391803-5E60-4BED-9B54-F9004412E16C}|drivers\\simplecontroller\\simplecontroller.vcxproj|C:\\Users\\haruto\\Documents\\GitHub\\openvr\\openvr\\samples\\drivers\\drivers\\simplecontroller\\src\\hmd_driver_factory.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
+      "RelativeMoniker": "D:0:0:{13391803-5E60-4BED-9B54-F9004412E16C}|drivers\\simplecontroller\\simplecontroller.vcxproj|solutionrelative:drivers\\simplecontroller\\src\\hmd_driver_factory.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{13391803-5E60-4BED-9B54-F9004412E16C}|drivers\\simplecontroller\\simplecontroller.vcxproj|C:\\Users\\haruto\\Documents\\GitHub\\openvr\\openvr\\samples\\drivers\\drivers\\simplecontroller\\src\\device_provider.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
+      "RelativeMoniker": "D:0:0:{13391803-5E60-4BED-9B54-F9004412E16C}|drivers\\simplecontroller\\simplecontroller.vcxproj|solutionrelative:drivers\\simplecontroller\\src\\device_provider.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{13391803-5E60-4BED-9B54-F9004412E16C}|drivers\\simplecontroller\\simplecontroller.vcxproj|C:\\Users\\haruto\\Documents\\GitHub\\openvr\\openvr\\samples\\drivers\\drivers\\simplecontroller\\src\\controller_device_driver.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
+      "RelativeMoniker": "D:0:0:{13391803-5E60-4BED-9B54-F9004412E16C}|drivers\\simplecontroller\\simplecontroller.vcxproj|solutionrelative:drivers\\simplecontroller\\src\\controller_device_driver.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
+    },
+    {
       "AbsoluteMoniker": "D:0:0:{1A008D17-0760-4179-8D42-995C5FF1C8D6}|drivers\\simplehmd\\simplehmd.vcxproj|C:\\PROGRAM FILES\\MICROSOFT VISUAL STUDIO\\2022\\COMMUNITY\\VC\\TOOLS\\MSVC\\14.39.33519\\INCLUDE\\MEMORY||{3B902123-F8A7-4915-9F01-361F908088D0}"
     }
   ],
@@ -18,6 +30,45 @@
             {
               "$type": "Document",
               "DocumentIndex": 0,
+              "Title": "hmd_driver_factory.cpp",
+              "DocumentMoniker": "C:\\Users\\haruto\\Documents\\GitHub\\openvr\\openvr\\samples\\drivers\\drivers\\simplecontroller\\src\\hmd_driver_factory.cpp",
+              "RelativeDocumentMoniker": "drivers\\simplecontroller\\src\\hmd_driver_factory.cpp",
+              "ToolTip": "C:\\Users\\haruto\\Documents\\GitHub\\openvr\\openvr\\samples\\drivers\\drivers\\simplecontroller\\src\\hmd_driver_factory.cpp",
+              "RelativeToolTip": "drivers\\simplecontroller\\src\\hmd_driver_factory.cpp",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAACMAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000677|",
+              "WhenOpened": "2024-02-28T13:46:51.128Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "device_provider.cpp",
+              "DocumentMoniker": "C:\\Users\\haruto\\Documents\\GitHub\\openvr\\openvr\\samples\\drivers\\drivers\\simplecontroller\\src\\device_provider.cpp",
+              "RelativeDocumentMoniker": "drivers\\simplecontroller\\src\\device_provider.cpp",
+              "ToolTip": "C:\\Users\\haruto\\Documents\\GitHub\\openvr\\openvr\\samples\\drivers\\drivers\\simplecontroller\\src\\device_provider.cpp",
+              "RelativeToolTip": "drivers\\simplecontroller\\src\\device_provider.cpp",
+              "ViewState": "AQIAAFQAAAAAAAAAAAAcwH8AAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000677|",
+              "WhenOpened": "2024-02-28T13:42:36.952Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "controller_device_driver.cpp",
+              "DocumentMoniker": "C:\\Users\\haruto\\Documents\\GitHub\\openvr\\openvr\\samples\\drivers\\drivers\\simplecontroller\\src\\controller_device_driver.cpp",
+              "RelativeDocumentMoniker": "drivers\\simplecontroller\\src\\controller_device_driver.cpp",
+              "ToolTip": "C:\\Users\\haruto\\Documents\\GitHub\\openvr\\openvr\\samples\\drivers\\drivers\\simplecontroller\\src\\controller_device_driver.cpp",
+              "RelativeToolTip": "drivers\\simplecontroller\\src\\controller_device_driver.cpp",
+              "ViewState": "AQIAAPMAAAAAAAAAAAAcwAgBAAABAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000677|",
+              "WhenOpened": "2024-02-28T13:31:51.553Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
               "Title": "memory",
               "DocumentMoniker": "C:\\Program Files\\Microsoft Visual Studio\\2022\\Community\\VC\\Tools\\MSVC\\14.39.33519\\include\\memory",
               "RelativeDocumentMoniker": "..\\..\\..\\..\\..\\..\\..\\..\\Program Files\\Microsoft Visual Studio\\2022\\Community\\VC\\Tools\\MSVC\\14.39.33519\\include\\memory",

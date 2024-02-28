@@ -1,46 +1,46 @@
-//============ Copyright (c) Valve Corporation, All rights reserved. ============
+//============ 著作権 (c) Valve Corporation、全著作権所有。 ============
 #include "device_provider.h"
 
 #include "driverlog.h"
 
 //-----------------------------------------------------------------------------
-// Purpose: This is called by vrserver after it receives a pointer back from HmdDriverFactory.
-// You should do your resources allocations here (**not** in the constructor).
+// 目的: HmdDriverFactoryからポインターを受け取った後、vrserverによって呼び出されます。
+// リソースの割り当てはここで行う必要があります（**コンストラクタではなく**）。
 //-----------------------------------------------------------------------------
-vr::EVRInitError MyDeviceProvider::Init( vr::IVRDriverContext *pDriverContext )
+vr::EVRInitError MyDeviceProvider::Init(vr::IVRDriverContext* pDriverContext)
 {
-	// We need to initialise our driver context to make calls to the server.
-	// OpenVR provides a macro to do this for us.
-	VR_INIT_SERVER_DRIVER_CONTEXT( pDriverContext );
+	// サーバーにコールを行うために、ドライバーコンテキストを初期化する必要があります。
+	// OpenVRは、これを行うためのマクロを提供しています。
+	VR_INIT_SERVER_DRIVER_CONTEXT(pDriverContext);
 
-	// Let's add our controllers to the system.
-	// First, we need to actually instantiate our controller devices.
-	// We made the constructor take in a controller role, so let's pass their respective roles in.
-	my_left_controller_device_ = std::make_unique< MyControllerDeviceDriver >( vr::TrackedControllerRole_LeftHand );
-	my_right_controller_device_ = std::make_unique< MyControllerDeviceDriver >( vr::TrackedControllerRole_RightHand );
+	// コントローラーをシステムに追加します。
+	// まず、コントローラーデバイスを実際にインスタンス化する必要があります。
+	// コンストラクタでコントローラーの役割を受け取るようにしましたので、それぞれの役割を渡しましょう。
+	my_left_controller_device_ = std::make_unique< MyControllerDeviceDriver >(vr::TrackedControllerRole_LeftHand);
+	my_right_controller_device_ = std::make_unique< MyControllerDeviceDriver >(vr::TrackedControllerRole_RightHand);
 
-	// Now we need to tell vrserver about our controllers.
-	// The first argument is the serial number of the device, which must be unique across all devices.
-	// We get it from our driver settings when we instantiate,
-	// And can pass it out of the function with MyGetSerialNumber().
-	// Let's add the left hand controller first (there isn't a specific order).
-	// make sure we actually managed to create the device.
-	// TrackedDeviceAdded returning true means we have had our device added to SteamVR.
-	if ( !vr::VRServerDriverHost()->TrackedDeviceAdded( my_left_controller_device_->MyGetSerialNumber().c_str(), vr::TrackedDeviceClass_Controller, my_left_controller_device_.get() ) )
+	// 今度は、vrserverにコントローラーについて知らせる必要があります。
+	// 最初の引数はデバイスのシリアル番号で、すべてのデバイスで一意である必要があります。
+	// インスタンス化時にドライバー設定から取得しました。
+	// そして、MyGetSerialNumber()で関数を抜けて関数外に渡すことができます。
+	// 最初に左手のコントローラーを追加します（特定の順序はありません）。
+	// デバイスを実際に作成できたことを確認してください。
+	// TrackedDeviceAddedがtrueを返すと、デバイスがSteamVRに追加されたことを意味します。
+	if (!vr::VRServerDriverHost()->TrackedDeviceAdded(my_left_controller_device_->MyGetSerialNumber().c_str(), vr::TrackedDeviceClass_Controller, my_left_controller_device_.get()))
 	{
-		DriverLog( "Failed to create left controller device!" );
-		// We failed? Return early.
+		DriverLog("左コントローラーデバイスの作成に失敗しました！");
+		// 失敗した？ 早めに戻ります。
 		return vr::VRInitError_Driver_Unknown;
 	}
 
 
-	// Now, the right hand
-	// Make sure we actually managed to create the device.
-	// TrackedDeviceAdded returning true means we have had our device added to SteamVR.
-	if ( !vr::VRServerDriverHost()->TrackedDeviceAdded( my_right_controller_device_->MyGetSerialNumber().c_str(), vr::TrackedDeviceClass_Controller, my_right_controller_device_.get() ) )
+	// 今度は、右手
+	// デバイスを実際に作成できたことを確認してください。
+	// TrackedDeviceAddedがtrueを返すと、デバイスがSteamVRに追加されたことを意味します。
+	if (!vr::VRServerDriverHost()->TrackedDeviceAdded(my_right_controller_device_->MyGetSerialNumber().c_str(), vr::TrackedDeviceClass_Controller, my_right_controller_device_.get()))
 	{
-		DriverLog( "Failed to create right controller device!" );
-		// We failed? Return early.
+		DriverLog("右コントローラーデバイスの作成に失敗しました！");
+		// 失敗した？ 早めに戻ります。
 		return vr::VRInitError_Driver_Unknown;
 	}
 
@@ -48,16 +48,16 @@ vr::EVRInitError MyDeviceProvider::Init( vr::IVRDriverContext *pDriverContext )
 }
 
 //-----------------------------------------------------------------------------
-// Purpose: Tells the runtime which version of the API we are targeting.
-// Helper variables in the header you're using contain this information, which can be returned here.
+// 目的: ランタイムに、どのバージョンのAPIをターゲットにしているかを伝えます。
+// 使用しているヘッダーのヘルパー変数には、この情報が含まれており、ここで返されます。
 //-----------------------------------------------------------------------------
-const char *const *MyDeviceProvider::GetInterfaceVersions()
+const char* const* MyDeviceProvider::GetInterfaceVersions()
 {
 	return vr::k_InterfaceVersions;
 }
 
 //-----------------------------------------------------------------------------
-// Purpose: This function is deprecated and never called. But, it must still be defined, or we can't compile.
+// 目的: この関数は非推奨であり、呼び出されません。 ただし、それでも定義する必要があります。そうしないと、コンパイルできません。
 //-----------------------------------------------------------------------------
 bool MyDeviceProvider::ShouldBlockStandbyMode()
 {
@@ -65,63 +65,63 @@ bool MyDeviceProvider::ShouldBlockStandbyMode()
 }
 
 //-----------------------------------------------------------------------------
-// Purpose: This is called in the main loop of vrserver.
-// Drivers *can* do work here, but should ensure this work is relatively inexpensive.
-// A good thing to do here is poll for events from the runtime or applications
+// 目的: これはvrserverのメインループで呼び出されます。
+// ドライバーはここで作業を行うことができますが、この作業が比較的安価であることを確認する必要があります。
+// ここで行う良いことは、ランタイムやアプリケーションからのイベントのポーリングです。
 //-----------------------------------------------------------------------------
 void MyDeviceProvider::RunFrame()
 {
-	// call our devices to run a frame
-	if ( my_left_controller_device_ != nullptr )
+	// デバイスにフレームを実行させます
+	if (my_left_controller_device_ != nullptr)
 	{
 		my_left_controller_device_->MyRunFrame();
 	}
 
-	if ( my_right_controller_device_ != nullptr )
+	if (my_right_controller_device_ != nullptr)
 	{
 		my_right_controller_device_->MyRunFrame();
 	}
 
-	//Now, process events that were submitted for this frame.
+	// 今、このフレームに送信されたイベントを処理します。
 	vr::VREvent_t vrevent{};
-	while ( vr::VRServerDriverHost()->PollNextEvent( &vrevent, sizeof( vr::VREvent_t ) ) )
+	while (vr::VRServerDriverHost()->PollNextEvent(&vrevent, sizeof(vr::VREvent_t)))
 	{
-		if ( my_left_controller_device_ != nullptr )
+		if (my_left_controller_device_ != nullptr)
 		{
-			my_left_controller_device_->MyProcessEvent( vrevent );
+			my_left_controller_device_->MyProcessEvent(vrevent);
 		}
 
-		if ( my_right_controller_device_ != nullptr )
+		if (my_right_controller_device_ != nullptr)
 		{
-			my_right_controller_device_->MyProcessEvent( vrevent );
+			my_right_controller_device_->MyProcessEvent(vrevent);
 		}
 	}
 }
 
 //-----------------------------------------------------------------------------
-// Purpose: This function is called when the system enters a period of inactivity.
-// The devices might want to turn off their displays or go into a low power mode to preserve them.
+// 目的: この関数はシステムが非アクティブな状態に入ったときに呼び出されます。
+// デバイスは、ディスプレイをオフにしたり、低消費電力モードに入ったりして、それらを保護する必要があります。
 //-----------------------------------------------------------------------------
 void MyDeviceProvider::EnterStandby()
 {
 }
 
 //-----------------------------------------------------------------------------
-// Purpose: This function is called after the system has been in a period of inactivity, and is waking up again.
-// Turn back on the displays or devices here.
+// 目的: この関数は、システムが一定の期間非アクティブであった後に呼び出されます。ここでディスプレイまたはデバイスを再起動します。
 //-----------------------------------------------------------------------------
 void MyDeviceProvider::LeaveStandby()
 {
 }
 
 //-----------------------------------------------------------------------------
-// Purpose: This function is called just before the driver is unloaded from vrserver.
-// Drivers should free whatever resources they have acquired over the session here.
-// Any calls to the server is guaranteed to be valid before this, but not after it has been called.
+// 目的: この関数は、vrserverからドライバーがアンロードされる直前に呼び出されます。
+// ドライバーは、ここで獲得したリソースを解放する必要があります。
+// この関数が呼び出される前に、サーバーへのすべての呼び出しが有効であることが保証されていますが、
+// それ以降は呼び出せなくなります。
 //-----------------------------------------------------------------------------
 void MyDeviceProvider::Cleanup()
 {
-	// Our controller devices will have already deactivated. Let's now destroy them.
+	// コントローラーデバイスはすでに非アクティブになっています。 これらを破壊しましょう。
 	my_left_controller_device_ = nullptr;
 	my_right_controller_device_ = nullptr;
 }

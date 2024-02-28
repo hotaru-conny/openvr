@@ -1,4 +1,4 @@
-//============ Copyright (c) Valve Corporation, All rights reserved. ============
+//============ 著作権 (c) Valve Corporation、全著作権所有。 ============
 #include "device_provider.h"
 #include "openvr_driver.h"
 #include <cstring>
@@ -10,26 +10,25 @@
 #define HMD_DLL_EXPORT extern "C" __attribute__( ( visibility( "default" ) ) )
 #define HMD_DLL_IMPORT extern "C"
 #else
-#error "Unsupported Platform."
+#error "サポートされていないプラットフォームです。"
 #endif
 
 MyDeviceProvider device_provider;
 
 //-----------------------------------------------------------------------------
-// Purpose: This is exported from the shared library to be called as the entry point into the driver by vrserver.
-// You should return a point to your IServerTrackedDeviceProvider here, as well as optionally a watchdog (see other
-// samples).
+// 目的: これは共有ライブラリからエクスポートされ、vrserverによってドライバーへのエントリーポイントとして呼び出されます。
+// ここで、IServerTrackedDeviceProviderへのポインターを返す必要があります。他のサンプルを参照してください。
 //-----------------------------------------------------------------------------
-HMD_DLL_EXPORT void *HmdDriverFactory( const char *pInterfaceName, int *pReturnCode )
+HMD_DLL_EXPORT void* HmdDriverFactory(const char* pInterfaceName, int* pReturnCode)
 {
-	// This is where we return our device provider, if the HmdDriverFactory call asks for it.
-	if ( 0 == strcmp( vr::IServerTrackedDeviceProvider_Version, pInterfaceName ) )
+	// HmdDriverFactory呼び出しでそれを求められた場合、ここでデバイスプロバイダーを返します。
+	if (0 == strcmp(vr::IServerTrackedDeviceProvider_Version, pInterfaceName))
 	{
 		return &device_provider;
 	}
 
-	// Otherwise tell the runtime that we don't have this interface.
-	if ( pReturnCode )
+	// それ以外の場合は、ランタイムにこのインターフェースがないことを伝えます。
+	if (pReturnCode)
 		*pReturnCode = vr::VRInitError_Init_InterfaceNotFound;
 
 	return NULL;

@@ -1,0 +1,30 @@
+﻿C:\Program Files\Microsoft Visual Studio\2022\Community\MSBuild\Microsoft\VC\v170\Microsoft.CppBuild.targets(517,5): warning MSB8004: Output ディレクトリの末尾がスラッシュではありません。Output ディレクトリが適切に評価されるようにするために、このビルド インスタンスによってスラッシュが追加されます。
+  hmd_device_driver.cpp
+  device_provider.cpp
+C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.39.33519\include\memory(3434,32): error C2259: 'MyHMDDisplayComponent': 抽象クラスをインスタンス化できません。
+  (ソース ファイル 'src/hmd_device_driver.cpp' をコンパイルしています)
+  C:\Users\haruto\Documents\GitHub\openvr\openvr\samples\drivers\drivers\simplehmd\src\hmd_device_driver.h(31,7):
+  'MyHMDDisplayComponent' の宣言を確認してください
+  C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.39.33519\include\memory(3434,32):
+  次のメンバーが原因です:
+  C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.39.33519\include\memory(3434,32):
+  'bool vr::IVRDisplayComponent::ComputeInverseDistortion(vr::HmdVector2_t *,vr::EVREye,uint32_t,float,float)': は抽象型です
+  C:\Users\haruto\Documents\GitHub\openvr\openvr\headers\openvr_driver.h(2902,16):
+  'vr::IVRDisplayComponent::ComputeInverseDistortion' の宣言を確認してください
+  C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.39.33519\include\memory(3434,32):
+  テンプレートインスタンス化コンテキスト (最初に最も古いもの) は
+  	C:\Users\haruto\Documents\GitHub\openvr\openvr\samples\drivers\drivers\simplehmd\src\hmd_device_driver.cpp(50,31):
+  	コンパイル対象の関数 テンプレート インスタンス化 'std::unique_ptr<MyHMDDisplayComponent,std::default_delete<MyHMDDisplayComponent>> std::make_unique<MyHMDDisplayComponent,MyHMDDisplayDriverConfiguration&,0>(MyHMDDisplayDriverConfiguration &)' のリファレンスを確認してください
+  
+C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.39.33519\include\memory(3434,35): error C2259: 'MyHMDDisplayComponent': 抽象クラスをインスタンス化できません。
+  (ソース ファイル 'src/hmd_device_driver.cpp' をコンパイルしています)
+  C:\Users\haruto\Documents\GitHub\openvr\openvr\samples\drivers\drivers\simplehmd\src\hmd_device_driver.h(31,7):
+  'MyHMDDisplayComponent' の宣言を確認してください
+  C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.39.33519\include\memory(3434,35):
+  次のメンバーが原因です:
+  C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.39.33519\include\memory(3434,35):
+  'bool vr::IVRDisplayComponent::ComputeInverseDistortion(vr::HmdVector2_t *,vr::EVREye,uint32_t,float,float)': は抽象型です
+  C:\Users\haruto\Documents\GitHub\openvr\openvr\headers\openvr_driver.h(2902,16):
+  'vr::IVRDisplayComponent::ComputeInverseDistortion' の宣言を確認してください
+  
+  hmd_driver_factory.cpp

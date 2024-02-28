@@ -1,0 +1,69 @@
+﻿C:\Program Files\Microsoft Visual Studio\2022\Community\MSBuild\Microsoft\VC\v170\Microsoft.CppBuild.targets(517,5): warning MSB8004: Output ディレクトリの末尾がスラッシュではありません。Output ディレクトリが適切に評価されるようにするために、このビルド インスタンスによってスラッシュが追加されます。
+  controller_device_driver.cpp
+  device_provider.cpp
+  hand_simulation.cpp
+C:\Users\haruto\Documents\GitHub\openvr\openvr\samples\drivers\drivers\handskeletonsimulation\src\hand_simulation.cpp(63,32): warning C4305: '=': 'double' から 'float' へ切り詰めます。
+C:\Users\haruto\Documents\GitHub\openvr\openvr\samples\drivers\drivers\handskeletonsimulation\src\hand_simulation.cpp(64,34): warning C4305: '=': 'double' から 'float' へ切り詰めます。
+C:\Users\haruto\Documents\GitHub\openvr\openvr\samples\drivers\drivers\handskeletonsimulation\src\hand_simulation.cpp(66,34): warning C4305: '=': 'double' から 'float' へ切り詰めます。
+C:\Users\haruto\Documents\GitHub\openvr\openvr\samples\drivers\drivers\handskeletonsimulation\src\hand_simulation.cpp(67,28): warning C4305: '=': 'double' から 'float' へ切り詰めます。
+C:\Users\haruto\Documents\GitHub\openvr\openvr\samples\drivers\drivers\handskeletonsimulation\src\hand_simulation.cpp(71,41): warning C4305: '=': 'double' から 'float' へ切り詰めます。
+C:\Users\haruto\Documents\GitHub\openvr\openvr\samples\drivers\drivers\handskeletonsimulation\src\hand_simulation.cpp(72,41): warning C4305: '=': 'double' から 'float' へ切り詰めます。
+C:\Users\haruto\Documents\GitHub\openvr\openvr\samples\drivers\drivers\handskeletonsimulation\src\hand_simulation.cpp(73,36): warning C4305: '=': 'double' から 'float' へ切り詰めます。
+C:\Users\haruto\Documents\GitHub\openvr\openvr\samples\drivers\drivers\handskeletonsimulation\src\hand_simulation.cpp(82,46): warning C4305: '=': 'double' から 'float' へ切り詰めます。
+C:\Users\haruto\Documents\GitHub\openvr\openvr\samples\drivers\drivers\handskeletonsimulation\src\hand_simulation.cpp(84,46): warning C4305: '=': 'double' から 'float' へ切り詰めます。
+C:\Users\haruto\Documents\GitHub\openvr\openvr\samples\drivers\drivers\handskeletonsimulation\src\hand_simulation.cpp(85,46): warning C4305: '=': 'double' から 'float' へ切り詰めます。
+C:\Users\haruto\Documents\GitHub\openvr\openvr\samples\drivers\drivers\handskeletonsimulation\src\hand_simulation.cpp(88,44): warning C4305: '=': 'double' から 'float' へ切り詰めます。
+C:\Users\haruto\Documents\GitHub\openvr\openvr\samples\drivers\drivers\handskeletonsimulation\src\hand_simulation.cpp(90,44): warning C4305: '=': 'double' から 'float' へ切り詰めます。
+C:\Users\haruto\Documents\GitHub\openvr\openvr\samples\drivers\drivers\handskeletonsimulation\src\hand_simulation.cpp(91,44): warning C4305: '=': 'double' から 'float' へ切り詰めます。
+C:\Users\haruto\Documents\GitHub\openvr\openvr\samples\drivers\drivers\handskeletonsimulation\src\hand_simulation.cpp(101,38): warning C4244: '+=': 'double' から 'float' への変換です。データが失われる可能性があります。
+C:\Users\haruto\Documents\GitHub\openvr\openvr\samples\drivers\drivers\handskeletonsimulation\src\hand_simulation.cpp(103,36): warning C4244: '+=': 'double' から 'float' への変換です。データが失われる可能性があります。
+C:\Users\haruto\Documents\GitHub\openvr\openvr\samples\drivers\drivers\handskeletonsimulation\src\hand_simulation.cpp(104,36): warning C4244: '+=': 'double' から 'float' への変換です。データが失われる可能性があります。
+C:\Users\haruto\Documents\GitHub\openvr\openvr\samples\drivers\drivers\handskeletonsimulation\src\hand_simulation.cpp(106,38): warning C4244: '+=': 'double' から 'float' への変換です。データが失われる可能性があります。
+C:\Users\haruto\Documents\GitHub\openvr\openvr\samples\drivers\drivers\handskeletonsimulation\src\hand_simulation.cpp(107,32): warning C4244: '+=': 'double' から 'float' への変換です。データが失われる可能性があります。
+C:\Users\haruto\Documents\GitHub\openvr\openvr\samples\drivers\drivers\handskeletonsimulation\src\hand_simulation.cpp(247,38): warning C4244: '+=': 'double' から 'float' への変換です。データが失われる可能性があります。
+C:\Users\haruto\Documents\GitHub\openvr\openvr\samples\drivers\drivers\handskeletonsimulation\src\hand_simulation.cpp(248,38): warning C4244: '+=': 'double' から 'float' への変換です。データが失われる可能性があります。
+C:\Users\haruto\Documents\GitHub\openvr\openvr\samples\drivers\drivers\handskeletonsimulation\src\hand_simulation.cpp(251,36): warning C4244: '+=': 'double' から 'float' への変換です。データが失われる可能性があります。
+C:\Users\haruto\Documents\GitHub\openvr\openvr\samples\drivers\drivers\handskeletonsimulation\src\hand_simulation.cpp(252,36): warning C4244: '+=': 'double' から 'float' への変換です。データが失われる可能性があります。
+C:\Users\haruto\Documents\GitHub\openvr\openvr\samples\drivers\drivers\handskeletonsimulation\src\hand_simulation.cpp(255,32): warning C4244: '+=': 'double' から 'float' への変換です。データが失われる可能性があります。
+C:\Users\haruto\Documents\GitHub\openvr\openvr\samples\drivers\utils\vrmath\vrmath.h(116,34): warning C4244: '=': 'const double' から 'float' への変換です。データが失われる可能性があります。
+  (ソース ファイル 'src/hand_simulation.cpp' をコンパイルしています)
+  C:\Users\haruto\Documents\GitHub\openvr\openvr\samples\drivers\utils\vrmath\vrmath.h(116,34):
+  テンプレートインスタンス化コンテキスト (最初に最も古いもの) は
+  	C:\Users\haruto\Documents\GitHub\openvr\openvr\samples\drivers\drivers\handskeletonsimulation\src\hand_simulation.cpp(118,2):
+  	コンパイル対象の関数 テンプレート インスタンス化 'void HmdQuaternion_ConvertQuaternion<vr::HmdQuaternion_t,vr::HmdQuaternionf_t>(const T &,Q &)' のリファレンスを確認してください
+          with
+          [
+              T=vr::HmdQuaternion_t,
+              Q=vr::HmdQuaternionf_t
+          ]
+  
+C:\Users\haruto\Documents\GitHub\openvr\openvr\samples\drivers\utils\vrmath\vrmath.h(117,34): warning C4244: '=': 'const double' から 'float' への変換です。データが失われる可能性があります。
+  (ソース ファイル 'src/hand_simulation.cpp' をコンパイルしています)
+  
+C:\Users\haruto\Documents\GitHub\openvr\openvr\samples\drivers\utils\vrmath\vrmath.h(118,34): warning C4244: '=': 'const double' から 'float' への変換です。データが失われる可能性があります。
+  (ソース ファイル 'src/hand_simulation.cpp' をコンパイルしています)
+  
+C:\Users\haruto\Documents\GitHub\openvr\openvr\samples\drivers\utils\vrmath\vrmath.h(119,34): warning C4244: '=': 'const double' から 'float' への変換です。データが失われる可能性があります。
+  (ソース ファイル 'src/hand_simulation.cpp' をコンパイルしています)
+  
+  hmd_driver_factory.cpp
+     ライブラリ C:\Users\haruto\Documents\GitHub\openvr\openvr\samples\drivers\output\drivers\handskeletonsimulation\bin\win64\driver_handskeletonsimulation.lib とオブジェクト C:\Users\haruto\Documents\GitHub\openvr\openvr\samples\drivers\output\drivers\handskeletonsimulation\bin\win64\driver_handskeletonsimulation.exp を作成中
+  コード生成しています。
+  Previous IPDB not found, fall back to full compilation.
+  All 301 functions were compiled because no usable IPDB/IOBJ from previous compilation was found.
+  コード生成が終了しました。
+  handskeletonsimulation.vcxproj -> C:\Users\haruto\Documents\GitHub\openvr\openvr\samples\drivers\output\drivers\handskeletonsimulation\bin\win64\driver_handskeletonsimulation.dll
+  C:\Users\haruto\Documents\GitHub\openvr\openvr\samples\drivers\drivers\handskeletonsimulation\handskeletonsimulation\driver.vrdrivermanifest
+  C:\Users\haruto\Documents\GitHub\openvr\openvr\samples\drivers\drivers\handskeletonsimulation\handskeletonsimulation\resources\driver.vrresources
+  C:\Users\haruto\Documents\GitHub\openvr\openvr\samples\drivers\drivers\handskeletonsimulation\handskeletonsimulation\resources\icons\controller_status_error.png
+  C:\Users\haruto\Documents\GitHub\openvr\openvr\samples\drivers\drivers\handskeletonsimulation\handskeletonsimulation\resources\icons\controller_status_off.png
+  C:\Users\haruto\Documents\GitHub\openvr\openvr\samples\drivers\drivers\handskeletonsimulation\handskeletonsimulation\resources\icons\controller_status_ready.png
+  C:\Users\haruto\Documents\GitHub\openvr\openvr\samples\drivers\drivers\handskeletonsimulation\handskeletonsimulation\resources\icons\controller_status_ready_alert.png
+  C:\Users\haruto\Documents\GitHub\openvr\openvr\samples\drivers\drivers\handskeletonsimulation\handskeletonsimulation\resources\icons\controller_status_ready_low.png
+  C:\Users\haruto\Documents\GitHub\openvr\openvr\samples\drivers\drivers\handskeletonsimulation\handskeletonsimulation\resources\icons\controller_status_searching.gif
+  C:\Users\haruto\Documents\GitHub\openvr\openvr\samples\drivers\drivers\handskeletonsimulation\handskeletonsimulation\resources\icons\controller_status_searching_alert.gif
+  C:\Users\haruto\Documents\GitHub\openvr\openvr\samples\drivers\drivers\handskeletonsimulation\handskeletonsimulation\resources\icons\controller_status_standby.png
+  C:\Users\haruto\Documents\GitHub\openvr\openvr\samples\drivers\drivers\handskeletonsimulation\handskeletonsimulation\resources\input\mycontroller_profile.json
+  C:\Users\haruto\Documents\GitHub\openvr\openvr\samples\drivers\drivers\handskeletonsimulation\handskeletonsimulation\resources\localization\localization.json
+  C:\Users\haruto\Documents\GitHub\openvr\openvr\samples\drivers\drivers\handskeletonsimulation\handskeletonsimulation\resources\settings\default.vrsettings
+  13 File(s) copied

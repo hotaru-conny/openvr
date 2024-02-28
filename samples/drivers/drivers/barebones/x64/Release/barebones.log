@@ -1,0 +1,12 @@
+﻿C:\Program Files\Microsoft Visual Studio\2022\Community\MSBuild\Microsoft\VC\v170\Microsoft.CppBuild.targets(517,5): warning MSB8004: Output ディレクトリの末尾がスラッシュではありません。Output ディレクトリが適切に評価されるようにするために、このビルド インスタンスによってスラッシュが追加されます。
+  device_provider.cpp
+  hmd_driver_factory.cpp
+     ライブラリ C:\Users\haruto\Documents\GitHub\openvr\openvr\samples\drivers\output\drivers\barebones\bin\win64\driver_barebones.lib とオブジェクト C:\Users\haruto\Documents\GitHub\openvr\openvr\samples\drivers\output\drivers\barebones\bin\win64\driver_barebones.exp を作成中
+  コード生成しています。
+  Previous IPDB not found, fall back to full compilation.
+  All 30 functions were compiled because no usable IPDB/IOBJ from previous compilation was found.
+  コード生成が終了しました。
+  barebones.vcxproj -> C:\Users\haruto\Documents\GitHub\openvr\openvr\samples\drivers\output\drivers\barebones\bin\win64\driver_barebones.dll
+  C:\Users\haruto\Documents\GitHub\openvr\openvr\samples\drivers\drivers\barebones\barebones\driver.vrdrivermanifest
+  C:\Users\haruto\Documents\GitHub\openvr\openvr\samples\drivers\drivers\barebones\barebones\resources\driver.vrresources
+  2 File(s) copied
